@@ -29,6 +29,8 @@ public class MailServiceImpl implements MailService {
 
         String error = "";
         try {
+
+            System.out.println("Sending mail to "+msg.getRecipentEmail());
             MimeMessage message = javaMailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             helper.setFrom(sender);
