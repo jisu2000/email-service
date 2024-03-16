@@ -36,7 +36,7 @@ public class MailServiceImpl implements MailService {
             helper.setFrom(sender);
             helper.setTo(msg.getRecipentEmail());
             helper.setSubject(msg.getSubject());
-            helper.setText(msg.getBody());
+            helper.setText(msg.getBody(),true);
             javaMailSender.send(message);
 
             ApiResponse apiResponse = new ApiResponse();
